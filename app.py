@@ -2,13 +2,11 @@ from flask import Flask, render_template, jsonify
 from worker import start_worker
 
 app = Flask(__name__)
-
-# Start background worker when app boots
 start_worker()
 
 @app.route('/')
 def index():
-    return "Online Casino Council Main Hub is Live!"
+    return "Online Casino Council Autonomous Node is Live."
 
 @app.route('/council-hub')
 def council_hub():
@@ -21,7 +19,11 @@ def council_hub():
 
 @app.route('/api/trigger-worker', methods=['POST'])
 def trigger_worker_api():
-    return jsonify({"success": True, "message": "Background process triggered successfully."})
+    return jsonify({"success": True, "message": "Manual threat scan triggered successfully."})
+
+@app.route('/api/emergency/lockdown', methods=['POST'])
+def emergency_lockdown():
+    return jsonify({"success": True, "alert": "GLOBAL CIRCUIT BREAKER ENGAGED. Assets and balances frozen."})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=False)

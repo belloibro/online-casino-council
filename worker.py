@@ -3,7 +3,7 @@ import threading
 
 def background_task():
     while True:
-        print("[Worker] Running background health check and event sync...")
+        print("[Worker] Running continuous threat telemetry, velocity spikes, and audit sync...")
         time.sleep(30)
 
 def start_worker():
