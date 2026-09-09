@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Council Hub</title>
+    <style>
+        body { background-color: #121212; color: #e0e0e0; font-family: monospace; padding: 20px; }
+        .card { background: #1e1e1e; padding: 20px; border-radius: 8px; border: 1px solid #333; max-width: 600px; margin: auto; }
+        h1 { color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Online Casino Council Hub</h1>
+        <p>Status: <strong>{{ data.status }}</strong></p>
+        <p>Active Members: <strong>{{ data.active_members }}</strong></p>
+        <p>Node Environment: <strong>{{ data.node }}</strong></p>
+    </div>
+</body>
+</html>
